@@ -3662,7 +3662,7 @@ export namespace Prisma {
     email: string
     profilePhoto: string | null
     contactNumber: string
-    address: string
+    address: string | null
     registrationNumber: string
     experience: number
     gender: $Enums.Gender
@@ -3795,7 +3795,7 @@ export namespace Prisma {
       email: string
       profilePhoto: string | null
       contactNumber: string
-      address: string
+      address: string | null
       registrationNumber: string
       experience: number
       gender: $Enums.Gender
@@ -4816,7 +4816,7 @@ export namespace Prisma {
     email: string
     name: string
     profilePhoto: string | null
-    address: string
+    address: string | null
     isDeleted: boolean
     createdAt: Date
     updatedAt: Date
@@ -4907,7 +4907,7 @@ export namespace Prisma {
       email: string
       name: string
       profilePhoto: string | null
-      address: string
+      address: string | null
       isDeleted: boolean
       createdAt: Date
       updatedAt: Date
@@ -6127,7 +6127,7 @@ export namespace Prisma {
     email?: StringFilter<"Doctor"> | string
     profilePhoto?: StringNullableFilter<"Doctor"> | string | null
     contactNumber?: StringFilter<"Doctor"> | string
-    address?: StringFilter<"Doctor"> | string
+    address?: StringNullableFilter<"Doctor"> | string | null
     registrationNumber?: StringFilter<"Doctor"> | string
     experience?: IntFilter<"Doctor"> | number
     gender?: EnumGenderFilter<"Doctor"> | $Enums.Gender
@@ -6147,7 +6147,7 @@ export namespace Prisma {
     email?: SortOrder
     profilePhoto?: SortOrderInput | SortOrder
     contactNumber?: SortOrder
-    address?: SortOrder
+    address?: SortOrderInput | SortOrder
     registrationNumber?: SortOrder
     experience?: SortOrder
     gender?: SortOrder
@@ -6170,7 +6170,7 @@ export namespace Prisma {
     name?: StringFilter<"Doctor"> | string
     profilePhoto?: StringNullableFilter<"Doctor"> | string | null
     contactNumber?: StringFilter<"Doctor"> | string
-    address?: StringFilter<"Doctor"> | string
+    address?: StringNullableFilter<"Doctor"> | string | null
     registrationNumber?: StringFilter<"Doctor"> | string
     experience?: IntFilter<"Doctor"> | number
     gender?: EnumGenderFilter<"Doctor"> | $Enums.Gender
@@ -6190,7 +6190,7 @@ export namespace Prisma {
     email?: SortOrder
     profilePhoto?: SortOrderInput | SortOrder
     contactNumber?: SortOrder
-    address?: SortOrder
+    address?: SortOrderInput | SortOrder
     registrationNumber?: SortOrder
     experience?: SortOrder
     gender?: SortOrder
@@ -6217,7 +6217,7 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"Doctor"> | string
     profilePhoto?: StringNullableWithAggregatesFilter<"Doctor"> | string | null
     contactNumber?: StringWithAggregatesFilter<"Doctor"> | string
-    address?: StringWithAggregatesFilter<"Doctor"> | string
+    address?: StringNullableWithAggregatesFilter<"Doctor"> | string | null
     registrationNumber?: StringWithAggregatesFilter<"Doctor"> | string
     experience?: IntWithAggregatesFilter<"Doctor"> | number
     gender?: EnumGenderWithAggregatesFilter<"Doctor"> | $Enums.Gender
@@ -6238,7 +6238,7 @@ export namespace Prisma {
     email?: StringFilter<"Patient"> | string
     name?: StringFilter<"Patient"> | string
     profilePhoto?: StringNullableFilter<"Patient"> | string | null
-    address?: StringFilter<"Patient"> | string
+    address?: StringNullableFilter<"Patient"> | string | null
     isDeleted?: BoolFilter<"Patient"> | boolean
     createdAt?: DateTimeFilter<"Patient"> | Date | string
     updatedAt?: DateTimeFilter<"Patient"> | Date | string
@@ -6250,7 +6250,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrder
     profilePhoto?: SortOrderInput | SortOrder
-    address?: SortOrder
+    address?: SortOrderInput | SortOrder
     isDeleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -6265,7 +6265,7 @@ export namespace Prisma {
     NOT?: PatientWhereInput | PatientWhereInput[]
     name?: StringFilter<"Patient"> | string
     profilePhoto?: StringNullableFilter<"Patient"> | string | null
-    address?: StringFilter<"Patient"> | string
+    address?: StringNullableFilter<"Patient"> | string | null
     isDeleted?: BoolFilter<"Patient"> | boolean
     createdAt?: DateTimeFilter<"Patient"> | Date | string
     updatedAt?: DateTimeFilter<"Patient"> | Date | string
@@ -6277,7 +6277,7 @@ export namespace Prisma {
     email?: SortOrder
     name?: SortOrder
     profilePhoto?: SortOrderInput | SortOrder
-    address?: SortOrder
+    address?: SortOrderInput | SortOrder
     isDeleted?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -6294,7 +6294,7 @@ export namespace Prisma {
     email?: StringWithAggregatesFilter<"Patient"> | string
     name?: StringWithAggregatesFilter<"Patient"> | string
     profilePhoto?: StringNullableWithAggregatesFilter<"Patient"> | string | null
-    address?: StringWithAggregatesFilter<"Patient"> | string
+    address?: StringNullableWithAggregatesFilter<"Patient"> | string | null
     isDeleted?: BoolWithAggregatesFilter<"Patient"> | boolean
     createdAt?: DateTimeWithAggregatesFilter<"Patient"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Patient"> | Date | string
@@ -6470,7 +6470,7 @@ export namespace Prisma {
     name: string
     profilePhoto?: string | null
     contactNumber: string
-    address: string
+    address?: string | null
     registrationNumber: string
     experience?: number
     gender: $Enums.Gender
@@ -6490,7 +6490,7 @@ export namespace Prisma {
     email: string
     profilePhoto?: string | null
     contactNumber: string
-    address: string
+    address?: string | null
     registrationNumber: string
     experience?: number
     gender: $Enums.Gender
@@ -6508,7 +6508,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
     contactNumber?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     registrationNumber?: StringFieldUpdateOperationsInput | string
     experience?: IntFieldUpdateOperationsInput | number
     gender?: EnumGenderFieldUpdateOperationsInput | $Enums.Gender
@@ -6528,7 +6528,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
     contactNumber?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     registrationNumber?: StringFieldUpdateOperationsInput | string
     experience?: IntFieldUpdateOperationsInput | number
     gender?: EnumGenderFieldUpdateOperationsInput | $Enums.Gender
@@ -6547,7 +6547,7 @@ export namespace Prisma {
     email: string
     profilePhoto?: string | null
     contactNumber: string
-    address: string
+    address?: string | null
     registrationNumber: string
     experience?: number
     gender: $Enums.Gender
@@ -6565,7 +6565,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
     contactNumber?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     registrationNumber?: StringFieldUpdateOperationsInput | string
     experience?: IntFieldUpdateOperationsInput | number
     gender?: EnumGenderFieldUpdateOperationsInput | $Enums.Gender
@@ -6584,7 +6584,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
     contactNumber?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     registrationNumber?: StringFieldUpdateOperationsInput | string
     experience?: IntFieldUpdateOperationsInput | number
     gender?: EnumGenderFieldUpdateOperationsInput | $Enums.Gender
@@ -6601,7 +6601,7 @@ export namespace Prisma {
     id?: string
     name: string
     profilePhoto?: string | null
-    address: string
+    address?: string | null
     isDeleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -6613,7 +6613,7 @@ export namespace Prisma {
     email: string
     name: string
     profilePhoto?: string | null
-    address: string
+    address?: string | null
     isDeleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -6623,7 +6623,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     isDeleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6635,7 +6635,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     isDeleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6646,7 +6646,7 @@ export namespace Prisma {
     email: string
     name: string
     profilePhoto?: string | null
-    address: string
+    address?: string | null
     isDeleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -6656,7 +6656,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     isDeleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -6667,7 +6667,7 @@ export namespace Prisma {
     email?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     isDeleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7450,7 +7450,7 @@ export namespace Prisma {
     name: string
     profilePhoto?: string | null
     contactNumber: string
-    address: string
+    address?: string | null
     registrationNumber: string
     experience?: number
     gender: $Enums.Gender
@@ -7468,7 +7468,7 @@ export namespace Prisma {
     name: string
     profilePhoto?: string | null
     contactNumber: string
-    address: string
+    address?: string | null
     registrationNumber: string
     experience?: number
     gender: $Enums.Gender
@@ -7490,7 +7490,7 @@ export namespace Prisma {
     id?: string
     name: string
     profilePhoto?: string | null
-    address: string
+    address?: string | null
     isDeleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -7500,7 +7500,7 @@ export namespace Prisma {
     id?: string
     name: string
     profilePhoto?: string | null
-    address: string
+    address?: string | null
     isDeleted?: boolean
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -7558,7 +7558,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
     contactNumber?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     registrationNumber?: StringFieldUpdateOperationsInput | string
     experience?: IntFieldUpdateOperationsInput | number
     gender?: EnumGenderFieldUpdateOperationsInput | $Enums.Gender
@@ -7576,7 +7576,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
     contactNumber?: StringFieldUpdateOperationsInput | string
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     registrationNumber?: StringFieldUpdateOperationsInput | string
     experience?: IntFieldUpdateOperationsInput | number
     gender?: EnumGenderFieldUpdateOperationsInput | $Enums.Gender
@@ -7604,7 +7604,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     isDeleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7614,7 +7614,7 @@ export namespace Prisma {
     id?: StringFieldUpdateOperationsInput | string
     name?: StringFieldUpdateOperationsInput | string
     profilePhoto?: NullableStringFieldUpdateOperationsInput | string | null
-    address?: StringFieldUpdateOperationsInput | string
+    address?: NullableStringFieldUpdateOperationsInput | string | null
     isDeleted?: BoolFieldUpdateOperationsInput | boolean
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
