@@ -3,7 +3,8 @@ import prisma from "../../shared/prisma";
 import bcrypt from 'bcryptjs';
 import jwt, { SignOptions } from "jsonwebtoken";
 import config from "../../../config";
-import { generateToken } from "../../utils/jwt";
+import { jwtHelper } from "../../utils/jwt";
+
 
 const login = async (payload: { email: string, password: string }) => {
 
@@ -19,8 +20,8 @@ const login = async (payload: { email: string, password: string }) => {
     if (!isCorrectPwd) {
         throw new Error("Password Is In Correct!")
     }
-    const accessToken = generateToken({ email: user.email, role: user.role }, config.JWT.JWT_SECRET as string, config.JWT.JWT_EXPIRE as string);
-    const refreshToken = generateToken({ email: user.email, role: user.role }, config.JWT.JWT_REFRESH_SECRET as string, config.JWT.JWT_REFRESH_EXPIRE as string);
+    const accessToken = jwtHelper.generateToken({ email: user.email, role: user.role }, config.JWT.JWT_SECRET as string, config.JWT.JWT_EXPIRE as string);
+    const refreshToken = jwtHelper.generateToken({ email: user.email, role: user.role }, config.JWT.JWT_REFRESH_SECRET as string, config.JWT.JWT_REFRESH_EXPIRE as string);
 
     return {
         accessToken,
