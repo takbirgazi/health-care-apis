@@ -1,6 +1,8 @@
 import { NextFunction, Request, Response } from "express"
 import { jwtHelper } from "../utils/jwt";
 import config from "../../config";
+import ApiError from "../errors/ApiError";
+import statusCode from "http-status";
 
 
 const auth = (...roles: string[]) => {
@@ -9,7 +11,7 @@ const auth = (...roles: string[]) => {
             // const token = req.cookies.get("accessToken");
             const token = req.cookies.accessToken;
             if (!token) {
-                throw new Error("You are not authorized!")
+                throw new ApiError(statusCode.UNAUTHORIZED,"You are not authorized!")
             }
 
             const verifyUser = jwtHelper.verifyToken(token, config.JWT.JWT_SECRET as string);
@@ -17,7 +19,7 @@ const auth = (...roles: string[]) => {
             req.user = verifyUser;
 
             if (roles.length && !roles.includes(verifyUser.role)) {
-                throw new Error("You are not authorized!")
+                throw new ApiError(statusCode.UNAUTHORIZED,"You are not authorized!")
             }
 
             next();
