@@ -1,7 +1,7 @@
-node_modules
-dist
+node_modules
+dist
+
+/src/generated/prisma
+/src/generated/prisma
+config.bat
 .env
-.env.test
-
-/src/generated/prisma
-/src/generated/prisma
